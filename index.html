@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Công cụ Link & QR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Công cụ Link ↔ QR & Ảnh → URL / QR / PDF</h1>
+    <div class="theme-switcher">
+      <button data-theme="white">Trắng</button>
+      <button data-theme="black">Đen</button>
+      <button data-theme="yellow">Vàng</button>
+      <button data-theme="red">Đỏ</button>
+      <button data-theme="purple">Tím</button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <details open>
+        <summary>Hướng dẫn rút gọn</summary>
+        <ul>
+          <li>URL → QR / PNG / PDF (A3/A4/A5/A6)</li>
+          <li>URL → link khác (redirect.html)</li>
+          <li>Ảnh → DataURL / QR / PDF</li>
+          <li>Hiển thị dung lượng QR trước khi tải</li>
+        </ul>
+      </details>
+    </section>
+
+    <section>
+      <h2>1) Công cụ cho URL</h2>
+      <input id="urlInput" type="url" placeholder="https://...">
+      <button id="btnMakeQR">Tạo QR</button>
+      <button id="btnQRtoPNG">Tải QR PNG</button>
+      <button id="btnQRtoPDF">Tải QR PDF</button>
+      <button id="btnMakeRedirect">Tạo redirect.html</button>
+      <div id="qrBox"></div>
+      <span id="qrUrlSizeHint"></span>
+    </section>
+
+    <section>
+      <h2>2) Công cụ cho Ảnh</h2>
+      <input id="imgInput" type="file" accept="image/*">
+      <button id="btnMakeImgQR">QR ảnh</button>
+      <button id="btnDownloadImgQRPNG">Tải QR PNG</button>
+      <button id="btnDownloadImgQRPDF">Tải QR PDF</button>
+      <button id="btnImgToPDF">Xuất ảnh PDF</button>
+      <div id="qrImgBox"></div>
+      <span id="qrImgSizeHint"></span>
+    </section>
+  </main>
+
+  <footer>
+    <button id="chatBtn">💬 Liên hệ</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
